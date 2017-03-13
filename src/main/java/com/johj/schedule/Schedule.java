@@ -1,8 +1,10 @@
 package com.johj.schedule;
 
 import com.johj.mail.JavaMail;
+import com.johj.redis.JedisServer;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import redis.clients.jedis.Jedis;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -19,13 +21,23 @@ public class Schedule {
 
     @Scheduled(fixedRate = 5000)
     public void reportCurrentTime() throws InterruptedException {
-        JavaMail javaMail = new JavaMail();
-        javaMail.sendMail("wenwei@qq.ccom","zhou_wenwei@wuxiapptec.com","test");
-        System.out.println(String.format("第%s次记录；当前时间为%s", count0++, simpleDateFormat.format(new Date())));
+        //JavaMail javaMail = new JavaMail();
+        //javaMail.sendMail("wenwei@qq.ccom","zhou_wenwei@wuxiapptec.com","test");
+        JedisServer jedisServer = new JedisServer("localhost");
+        String redistr = "";
+        if (jedisServer.getData("wenwei") == null || "".equals(jedisServer.getData("wenwei"))) {
+            redistr = "I" ;
+        }else{
+            redistr = jedisServer.getData("wenwei");
+        }
+        jedisServer.setData("wenwei", redistr + " love u");
+        System.out.println(String.format("+++++++++" + jedisServer.getData("wenwei") + "第%s次记录；当前时间为%s", count0++, simpleDateFormat.format(new Date())));
     }
 
     @Scheduled(fixedDelay = 5000)
     public void reportCurrentTimeAfterSleep() throws InterruptedException {
+        JedisServer jedisServer = new JedisServer("localhost");
+
         System.out.println(String.format("===第%s次执行，当前时间为：%s", count1++, simpleDateFormat.format(new Date())));
     }
 
