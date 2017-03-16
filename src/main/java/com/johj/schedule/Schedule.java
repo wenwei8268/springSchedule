@@ -22,7 +22,6 @@ public class Schedule {
     @Scheduled(fixedRate = 5000)
     public void reportCurrentTime() throws InterruptedException {
         //JavaMail javaMail = new JavaMail();
-        //javaMail.sendMail("wenwei@qq.ccom","zhou_wenwei@wuxiapptec.com","test");
         JedisServer jedisServer = new JedisServer("localhost");
         String redistr = "";
         if (jedisServer.getData("wenwei") == null || "".equals(jedisServer.getData("wenwei"))) {
