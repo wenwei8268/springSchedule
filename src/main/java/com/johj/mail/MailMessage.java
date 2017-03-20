@@ -1,7 +1,6 @@
 package com.johj.mail;/**
 
- * author:zhou_wenwei
- * mail:zhou_wenwei@wuxiapptec.com
+
  * date:2017/3/13
  * description:
  */

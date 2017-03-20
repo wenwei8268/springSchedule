@@ -1,17 +1,5 @@
-package com.johj.mail;/**
- * Copyright (c) 2016-2020 WuXiNextCODE  Inc.
- * All Rights Reserved.
- * <p>
- * This software is the confidential and proprietary information of
- * WuXiNextCODE Genetics Inc. ("Confidential Information"). You shall not
- * disclose such Confidential Information and shall use it only in
- * accordance with the terms of the license agreement you entered into
- * with WuXiNextCODE.
- * author:zhou_wenwei
- * mail:zhou_wenwei@wuxiapptec.com
- * date:2017/3/13
- * description:
- */
+package com.johj.mail;
+
 
 import blade.kit.StringKit;
 
