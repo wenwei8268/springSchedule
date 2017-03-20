@@ -23,6 +23,6 @@ public class SequenceUtils {
 	}
 	
 	public static void main(String args[]) throws Exception{
-		SequenceUtils.getSequence("");
+		System.out.print(SequenceUtils.getSequence("wenwei"));
 	}
 }
