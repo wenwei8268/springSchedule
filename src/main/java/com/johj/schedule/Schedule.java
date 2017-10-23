@@ -32,7 +32,6 @@ public class Schedule {
         jedisServer.setData("wenwei", redistr + " love u");
         System.out.println(String.format("+++++++++" + jedisServer.getData("wenwei") + "第%s次记录；当前时间为%s", count0++, simpleDateFormat.format(new Date())));
     }
-
     @Scheduled(fixedDelay = 5000)
     public void reportCurrentTimeAfterSleep() throws InterruptedException {
         JedisServer jedisServer = new JedisServer("localhost");
