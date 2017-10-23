@@ -4,10 +4,8 @@ package com.johj.java8;
  */
 
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -20,8 +18,9 @@ public class TestJava8 {
 
     public static void main(String[] args) {
         System.out.println();
-        sortMap();
-        listStream();
+        //sortMap();
+        //listStream();
+        stringJoin();
     }
 
 
@@ -71,6 +70,20 @@ public class TestJava8 {
 
 
         //System.out.println(count);
+
+    }
+    public static void stringJoin(){
+        StringJoiner sj = new StringJoiner("/", "prefix-", "-suffix");
+        sj.add("2016");
+        sj.add("02");
+        sj.add("26");
+        String result = sj.toString();
+        System.out.println(result);
+        List<String> list = Arrays.asList("java", "python", "nodejs", "ruby");
+
+        //java | python | nodejs | ruby
+        String result_ = list.stream().map(x -> x).collect(Collectors.joining(" | "));
+        System.out.println(result_);
 
     }
 
