@@ -80,7 +80,6 @@ public class TestJava8 {
         String result = sj.toString();
         System.out.println(result);
         List<String> list = Arrays.asList("java", "python", "nodejs", "ruby");
-
         //java | python | nodejs | ruby
         String result_ = list.stream().map(x -> x).collect(Collectors.joining(" | "));
         System.out.println(result_);
