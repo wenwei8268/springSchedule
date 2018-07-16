@@ -8,5 +8,7 @@ package com.johj.java9;
  * description: test the Interface method
  */
 public class Wenwei implements Person{
-    Wenwei(){}
+    public Wenwei(){}
+
+
 }
