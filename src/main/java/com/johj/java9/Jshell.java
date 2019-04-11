@@ -29,17 +29,17 @@ public class Jshell {
     /**
      * These useful methods are used to create a new Non-Empty Immutable Map with one element to 10 elements.
      */
-    private void immutableHashMap(){
-        //Immutable map  @since 1.9
-        Map<Integer,String> immutableMap = Map.of(1,"test1",2,"tests");
-        Stream.of(immutableMap).iterator().forEachRemaining(System.out::print);
-        // @since 1.8
-        Map<Integer,String> hashMap = new HashMap<>();
-        hashMap.put(1,"one");
-        hashMap.put(2,"two");
-        hashMap.put(3,"three");
-        Map immutableHashMap = Collections.unmodifiableMap(hashMap);
-        Stream.of(immutableHashMap).iterator().forEachRemaining(System.out::println);
-        System.out.println();
-    }
+//    private void immutableHashMap(){
+//        //Immutable map  @since 1.9
+//        Map<Integer,String> immutableMap = Map.of(1,"test1",2,"tests");
+//        Stream.of(immutableMap).iterator().forEachRemaining(System.out::print);
+//        // @since 1.8
+//        Map<Integer,String> hashMap = new HashMap<>();
+//        hashMap.put(1,"one");
+//        hashMap.put(2,"two");
+//        hashMap.put(3,"three");
+//        Map immutableHashMap = Collections.unmodifiableMap(hashMap);
+//        Stream.of(immutableHashMap).iterator().forEachRemaining(System.out::println);
+//        System.out.println();
+//    }
 }

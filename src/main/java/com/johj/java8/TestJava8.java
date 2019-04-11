@@ -17,11 +17,13 @@ import java.util.stream.Stream;
 public class TestJava8 {
 
     public static void main(String[] args) {
-        System.out.println();
+//        System.out.println();
         //sortMap();
         //listStream();
-        stringJoin();
+//        stringJoin();
+        ints();
     }
+
 
 
     public static void sortMap() {
@@ -85,6 +87,13 @@ public class TestJava8 {
         String result_ = list.stream().map(x -> x).collect(Collectors.joining(" | "));
         System.out.println(result_);
 
+    }
+
+    public static void ints(){
+        int x = 2 << 29;
+        System.out.println(x);
+        long lx = 2<<29;
+        System.out.println(lx);
     }
 
 
