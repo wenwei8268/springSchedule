@@ -18,5 +18,16 @@ public class TestClassLoader {
     }
     public static void main(String[] args){
         print();
+       ClassLoader classLoader =  ClassLoader.getSystemClassLoader();
+        System.out.println(classLoader);
+
+        //父加载器
+        ClassLoader classLoader1 = classLoader.getParent();
+        System.out.println(classLoader1);
+
+        //父父加载器
+       ClassLoader classLoader2 =  classLoader1.getParent();
+        System.out.println(classLoader2);
+
     }
 }

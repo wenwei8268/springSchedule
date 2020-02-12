@@ -21,9 +21,9 @@ public class TestJava8 {
         //sortMap();
         //listStream();
 //        stringJoin();
-        ints();
+//        ints();
+        inst();
     }
-
 
 
     public static void sortMap() {
@@ -66,15 +66,16 @@ public class TestJava8 {
     }
 
     public static void listStream() {
-        String[] list = {"a","b","c"};
+        String[] list = {"a", "b", "c"};
         Stream<String> stream = Arrays.stream(list);
-        stream.forEach(x-> System.out.println(x));
+        stream.forEach(x -> System.out.println(x));
 
 
         //System.out.println(count);
 
     }
-    public static void stringJoin(){
+
+    public static void stringJoin() {
         StringJoiner sj = new StringJoiner("/", "prefix-", "-suffix");
         sj.add("2016");
         sj.add("02");
@@ -89,11 +90,27 @@ public class TestJava8 {
 
     }
 
-    public static void ints(){
+    public static void ints() {
         int x = 2 << 29;
         System.out.println(x);
-        long lx = 2<<29;
+        long lx = 2 << 29;
         System.out.println(lx);
+    }
+
+    public static void inst() {
+        List list1 = new ArrayList();
+        list1.add(111);
+        list1.add(222);
+        list1.add(22333);
+
+        List list2 = new ArrayList();
+        list2.add(111);
+        list2.add(222);
+
+//        list1.addAll(list2);
+//        list1.removeAll(list2);
+//        System.out.println(list1);
+
     }
 
 
